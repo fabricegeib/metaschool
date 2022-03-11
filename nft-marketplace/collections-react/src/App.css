@@ -64,10 +64,10 @@ img {
 }
 
 .container {
-  width: 80%;
+  width: 60%;
     /* display: flex; */
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-around;
     text-align: center;
     margin: 0 auto;
 }
@@ -94,7 +94,7 @@ img {
   grid-template-rows: auto;
   row-gap: 2rem;
 
-  margin: 4rem 0;
+  margin: 2rem 0;
 }
 
 .nft {
