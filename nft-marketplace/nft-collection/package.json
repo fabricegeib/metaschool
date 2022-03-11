@@ -1,0 +1,16 @@
+{
+  "name": "nft-collection",
+  "version": "1.0.0",
+  "description": "nft collection by fabrice geib for the nft marketplace course of metaschool",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "solidity",
+    "nft",
+    "react"
+  ],
+  "author": "fabrice geib",
+  "license": "ISC"
+}
