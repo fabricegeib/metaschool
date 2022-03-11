@@ -162,3 +162,8 @@ Contract deployed to address: 0xee305cddE5B17b35eb8EBB664F79A020c3C857C1
 ```
 
 Lien vers le contrat : https://rinkeby.etherscan.io/address/0xee305cddE5B17b35eb8EBB664F79A020c3C857C1
+
+### Création du frontend de notre marketplace
+```shell
+npx create-react-app collections-react
+```
