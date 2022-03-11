@@ -166,4 +166,32 @@ Lien vers le contrat : https://rinkeby.etherscan.io/address/0xee305cddE5B17b35eb
 ### Création du frontend de notre marketplace
 ```shell
 npx create-react-app collections-react
+
+cd collections-react
+
+npm i ethers
 ```
+
+### Configurer Pinata
+
+Need add link github
+https://metaschool.so/courses/launch-your-own-epic-nft-marketplace/lesson/9de7dbcb-1948-4420-b014-d599a27b62b1
+
+
+https://gateway.pinata.cloud/ipfs/QmXZ3TgRgd5EZEk2DhwGvjf8f6sQJNCrnHzrEw1oHufgnL
+
+https://ipfs.io/ipfs/QmXZ3TgRgd5EZEk2DhwGvjf8f6sQJNCrnHzrEw1oHufgnL/1.png
+https://ipfs.io/ipfs/QmXZ3TgRgd5EZEk2DhwGvjf8f6sQJNCrnHzrEw1oHufgnL/2.png
+
+http://bafybeiei4xqifmumfnyo2k2l4vz2mvv25stdv3q54suj4qqhjyn7kypboe.ipfs.localhost:8080/
+http://bafybeiei4xqifmumfnyo2k2l4vz2mvv25stdv3q54suj4qqhjyn7kypboe.ipfs.localhost:8080/1.png
+http://bafybeiei4xqifmumfnyo2k2l4vz2mvv25stdv3q54suj4qqhjyn7kypboe.ipfs.localhost:8080/2.png
+
+
+https://gateway.pinata.cloud/ipfs/QmQNjFyowhQzxhiUYqZf5h2FpBuLXDbwKEDXDuvYdhmpxe
+
+https://ipfs.io/ipfs/QmQNjFyowhQzxhiUYqZf5h2FpBuLXDbwKEDXDuvYdhmpxe/1.json
+
+### Frontend et contractABI.json
+
+Dans le dossier `src` dans notre site `collections-react` créer un nouveau fichier `contractABI.json`
