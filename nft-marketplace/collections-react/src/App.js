@@ -92,63 +92,68 @@ function App() {
     }
  
     if (account === null) {
-      return (
-        <>
-         <div className="container">
-           <br/>
-          <h1> 🔮 metaschool</h1>
-          <h2>NFT Marketplace</h2>
-          <p>Buy an NFT from our marketplace.</p>
- 
-          {isWalletInstalled ? (
-            <button onClick={connectWallet}>Connect Wallet</button>
-          ) : (
-            <p>Install Metamask wallet</p>
-          )}
-          </div>
-          </>
-      );
+    	return (
+        	<div className="App">
+				<div className="container">
+					<h1>NFT Marketplace</h1>
+					<p>Buy an NFT from our marketplace.</p>
+
+					<div className="withdraw">
+						{isWalletInstalled ? (
+							<button onClick={connectWallet}>Connect Wallet</button>
+						) : (
+							<p>Install Metamask wallet</p>
+						)}
+					</div>
+
+					<footer className="footer">
+						<p>Made by <a href="https://fabricegeib.com" target="_blank">Fabrice Geib</a> with the course of <a href="https://metaschool.so">Metaschool.so</a></p>
+					</footer>
+				</div>
+        	</div>
+     	 );
     }
  
     return (
-      <>
-        <div className="container">
+    	<div className="App">
+			<div className="withdraw">
+				<button onClick={() => {withdrawMoney();}}>
+					Withdraw Money from Contract
+				</button>
+			</div>
+        	
+			<div className="container">
+		
+        	<h1>NFT Marketplace</h1>
 
-          <h1> 🔮 metaschool</h1>
- 
-          <h2>NFT Marketplace</h2>
+			Find the contract on Etherscan : <a href="https://rinkeby.etherscan.io/address/0xee305cdde5b17b35eb8ebb664f79a020c3c857c1">link</a>
+		
+			<div className="nfts">
+				{data.map((item, index) => (
+				<div className="nft" key={index}>
+					<img
+						src={item.url}
+						key={index}
+						alt="images"
+						// width={250}
+						// height={250}
+					/>
+					<button isLoading={isMinting}
+						onClick={() => {
+							eval(item.param);
+						}}
+					>
+						Mint for 0.01 eth
+					</button>
+				</div>
+				))}
+			</div>
 
-          Find the contract on Etherscan : <a href="https://rinkeby.etherscan.io/address/0xee305cdde5b17b35eb8ebb664f79a020c3c857c1">link</a>
-             
-          <div className="nfts">
-            {data.map((item, index) => (
-              <div className="imgDiv" key={index}>
-                <img
-                    src={item.url}
-                    key={index}
-                    alt="images"
-                    width={250}
-                    height={250}
-                />
-                <button isLoading={isMinting}
-                    onClick={() => {
-                        eval(item.param);
-                    }}
-                >
-                    Mint - 0.01 eth
-                </button>
-              </div>
-            ))}
-          </div>
-
-          <div className="withdraw">
-            <button onClick={() => {withdrawMoney();}}>
-              Withdraw Money from Contract
-            </button>
-          </div>
-
+			<footer className="footer">
+				<p>Made by <a href="https://fabricegeib.com" target="_blank">Fabrice Geib</a> with the course of <a href="https://metaschool.so">Metaschool.so</a></p>
+			</footer>
         </div>
-      </>
+      </div>
     );
 }
  

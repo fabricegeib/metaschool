@@ -1,5 +1,19 @@
+h1, h2, h3, p {
+  margin: 0;
+  padding: 0;
+}
+
 .App {
-  text-align: center;
+  /* text-align: center; */
+  background-color: #333;
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+  position: relative;
+  padding: 2rem 0;
 }
 
 .App-logo {
@@ -40,14 +54,15 @@
 
 /* Metaschool */
 
-.imgDiv {
-  display: inline-grid;
-  margin: 10px;
+a {
+  color: #C5AE6A;
 }
-.imgDiv button {
-  margin: 10px auto 0px auto;
- 
+
+img {
+  max-width: 100%;
+  height: auto;
 }
+
 .container {
   width: 80%;
     /* display: flex; */
@@ -56,23 +71,55 @@
     text-align: center;
     margin: 0 auto;
 }
+
+.withdraw {
+  position: absolute;
+  right: 24px;
+  top: 24px;
+}
+
+.imgDiv {
+  /* display: inline-grid; */
+  margin: 10px;
+}
+.imgDiv button {
+  margin: 10px auto 0px auto;
+ 
+}
+ 
+.nfts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 2rem;
+  grid-template-rows: auto;
+  row-gap: 2rem;
+
+  margin: 4rem 0;
+}
+
+.nft {
+
+}
  
 button {
-  padding: 7px 5px;
-  border-radius: 5px;
+  padding: 12px;
+  border-radius: 6px;
   border: none;
-  background-color: #4CAF50;
+  background-color: #C5AE6A;
   color: white;
+  cursor: pointer;
+  transition: .2s ease;
+  width: 100%;
 }
  
 button:hover {
-  background-color: #45a049;
+  background-color: #786a40;
 }
  
 .imgGrid {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-gap: 50px;
+  /* display: grid; */
+  /* grid-template-columns: repeat(3, 1fr); */
+  /* grid-gap: 50px; */
   margin-top: 50px;
   grid-auto-flow: dense;
   /* width: 100%; */
@@ -86,6 +133,10 @@ button:hover {
   border: 2px solid #4CAF50;
   border-radius: 15px;
   padding: 20px;
+}
+
+.footer {
+  margin-top: 2rem;
 }
  
 @media screen and (max-width: 1000px) {
