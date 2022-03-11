@@ -110,5 +110,11 @@ Counters - Provides a secure way to increment or decrement a number by 1. We wil
 Ownable - Allows us to use the ‘onlyOwner’ modifier which in turn allows us to create functions that only the owner of the contract can use.
 ERC721URIStorage - This is an extension of the ERC721 smart contract, that provides a way to store the metadata in an array list on chain using the _setTokenURI function.
 
-#### Creating the Mint function
+### Créer la fonction "Mint"
+
+A lire : https://docs.soliditylang.org/en/develop/units-and-global-variables.html?highlight=special%20variables%20and%20functions#block-and-transaction-properties
+
+### Comprendre le contrat
+
+### Writing the deployment script
 
