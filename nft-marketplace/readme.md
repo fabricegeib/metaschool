@@ -9,8 +9,8 @@ https://metaschool.so/courses/launch-your-own-epic-nft-marketplace/lesson/7cc096
 - This webpage will be able to list 5 NFTs, a user would be able to connect to their metamask and mint any 2 of these NFTs.
 - And that’s it, you will now be able to see and enjoy your NFT in your own metamask wallet!
 
-###
-```
+### Création de notre collection
+```shell
 mkdir nft-collection  
 cd nft-collection
 
@@ -34,13 +34,13 @@ Créer un applicatio sur alchemy
 Staging, Ethereum, Rinkeby
 
 ### Sécuriser les informations
-```
+```shell
 npm install dotenv --save
 ```
 
 Créer un fichier `.env`
 
-```
+```.env
 PRIVATE_KEY=YOUR-PRIVATE-KEY
 API_URL_KEY=YOUR-ALCHEMY-APP-URL
 ```
@@ -117,4 +117,48 @@ A lire : https://docs.soliditylang.org/en/develop/units-and-global-variables.htm
 ### Comprendre le contrat
 
 ### Writing the deployment script
+We have gotten most of the things set up already we just have to take care of 2 little things for now
+```shell
+npm install --save-dev @nomiclabs/hardhat-ethers ethers@^5.0.0
+```
 
+On compile le contract
+```shell
+npx hardhat compile
+```
+
+En retour dans le terminal :
+```shell
+Downloading compiler 0.8.2
+Compiled 13 Solidity files successfully
+```
+
+### Deploiement du contrat
+Dans le dossier `script` créer un fichier `deploy.js` : 
+```js
+async function main() {
+    const Collection = await ethers.getContractFactory("Collection")
+    const collection = await Collection.deploy()
+    await collection.deployed()
+    console.log("Contract deployed to address:", collection.address)
+  }
+ 
+  main()
+    .then(() => process.exit(0))
+    .catch((error) => {
+      console.error(error)
+      process.exit(1)
+    })
+```
+
+Deploiement du contrat sur le réseau Rinkeby :
+```
+npx hardhat --network rinkeby run scripts/deploy.js
+```
+
+Retour du terminal
+```
+Contract deployed to address: 0xee305cddE5B17b35eb8EBB664F79A020c3C857C1
+```
+
+Lien vers le contrat : https://rinkeby.etherscan.io/address/0xee305cddE5B17b35eb8EBB664F79A020c3C857C1
