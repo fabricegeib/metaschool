@@ -107,7 +107,7 @@ function App() {
 					</div>
 
 					<footer className="footer">
-						<p>Made by <a href="https://fabricegeib.com" target="_blank">Fabrice Geib</a> with the course of <a href="https://metaschool.so">Metaschool.so</a></p>
+						<p>Made by <a href="https://fabricegeib.com" target="_blank" rel="noreferrer">Fabrice Geib</a> with the course of <a href="https://metaschool.so" target="_blank" rel="noreferrer">Metaschool.so</a></p>
 					</footer>
 				</div>
         	</div>
@@ -150,7 +150,7 @@ function App() {
 			</div>
 
 			<footer className="footer">
-				<p>Made by <a href="https://fabricegeib.com" target="_blank">Fabrice Geib</a> with the course of <a href="https://metaschool.so">Metaschool.so</a></p>
+				<p>Made by <a href="https://fabricegeib.com" target="_blank" rel="noreferrer">Fabrice Geib</a> with the course of <a href="https://metaschool.so" target="_blank" rel="noreferrer">Metaschool.so</a></p>
 			</footer>
         </div>
       </div>
