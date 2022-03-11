@@ -189,8 +189,9 @@ http://bafybeiei4xqifmumfnyo2k2l4vz2mvv25stdv3q54suj4qqhjyn7kypboe.ipfs.localhos
 
 
 https://gateway.pinata.cloud/ipfs/QmQNjFyowhQzxhiUYqZf5h2FpBuLXDbwKEDXDuvYdhmpxe
-
+https://ipfs.io/ipfs/QmQNjFyowhQzxhiUYqZf5h2FpBuLXDbwKEDXDuvYdhmpxe
 https://ipfs.io/ipfs/QmQNjFyowhQzxhiUYqZf5h2FpBuLXDbwKEDXDuvYdhmpxe/1.json
+
 
 ### Frontend et contractABI.json
 
