@@ -104,3 +104,11 @@ contract Collection is ERC721URIStorage, Ownable {
     }
 }
 ```
+
+ERC721 - Standard implementation of the ERC721 smart contract used for making NFTs
+Counters - Provides a secure way to increment or decrement a number by 1. We will use counters to keep a track of the token IDs of our minted NFTs
+Ownable - Allows us to use the ‘onlyOwner’ modifier which in turn allows us to create functions that only the owner of the contract can use.
+ERC721URIStorage - This is an extension of the ERC721 smart contract, that provides a way to store the metadata in an array list on chain using the _setTokenURI function.
+
+#### Creating the Mint function
+
