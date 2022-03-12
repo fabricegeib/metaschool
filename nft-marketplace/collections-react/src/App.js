@@ -46,22 +46,52 @@ function App() {
     const data = [
         {
             url: "./assets/images/1.png",
+			description: "This is a dog NFT",
             param: "handleMint('https://ipfs.io/ipfs/QmQNjFyowhQzxhiUYqZf5h2FpBuLXDbwKEDXDuvYdhmpxe/1.json')",
         },
         {
-          url: "./assets/images/2.png",
+          	url: "./assets/images/4.png",
+			description: "This is a cow NFT",
             param: "handleMint('https://ipfs.io/ipfs/QmQNjFyowhQzxhiUYqZf5h2FpBuLXDbwKEDXDuvYdhmpxe/2.json')",
         },
         {
           url: "./assets/images/3.png",
+			description: "This is a lion NFT",
             param: "handleMint('https://ipfs.io/ipfs/QmQNjFyowhQzxhiUYqZf5h2FpBuLXDbwKEDXDuvYdhmpxe/3.json')",
         },
         {
-          url: "./assets/images/4.png",
+          url: "./assets/images/2.png",
+			description: "This is a fox NFT",
             param: "handleMint('https://ipfs.io/ipfs/QmQNjFyowhQzxhiUYqZf5h2FpBuLXDbwKEDXDuvYdhmpxe/4.json')",
         },
         {
           url: "./assets/images/5.png",
+			description: "This is a fox NFT",
+            param: "handleMint('https://ipfs.io/ipfs/QmQNjFyowhQzxhiUYqZf5h2FpBuLXDbwKEDXDuvYdhmpxe/5.json')",
+        },
+		{
+            url: "./assets/images/1.png",
+			description: "This is a dog NFT",
+            param: "handleMint('https://ipfs.io/ipfs/QmQNjFyowhQzxhiUYqZf5h2FpBuLXDbwKEDXDuvYdhmpxe/1.json')",
+        },
+        {
+          	url: "./assets/images/4.png",
+			description: "This is a cow NFT",
+            param: "handleMint('https://ipfs.io/ipfs/QmQNjFyowhQzxhiUYqZf5h2FpBuLXDbwKEDXDuvYdhmpxe/2.json')",
+        },
+        {
+          url: "./assets/images/3.png",
+			description: "This is a lion NFT",
+            param: "handleMint('https://ipfs.io/ipfs/QmQNjFyowhQzxhiUYqZf5h2FpBuLXDbwKEDXDuvYdhmpxe/3.json')",
+        },
+        {
+          url: "./assets/images/2.png",
+			description: "This is a fox NFT",
+            param: "handleMint('https://ipfs.io/ipfs/QmQNjFyowhQzxhiUYqZf5h2FpBuLXDbwKEDXDuvYdhmpxe/4.json')",
+        },
+        {
+          url: "./assets/images/5.png",
+			description: "This is a fox NFT",
             param: "handleMint('https://ipfs.io/ipfs/QmQNjFyowhQzxhiUYqZf5h2FpBuLXDbwKEDXDuvYdhmpxe/5.json')",
         },
     ];
@@ -95,9 +125,10 @@ function App() {
     	return (
         	<div className="App">
 				<div className="container">
-					<h1>NFT Marketplace</h1>
-					<p>Buy an NFT from our marketplace.</p>
-
+					<div className="header">
+						<h1>NFT Marketplace</h1>
+						<p>Buy an NFT from our marketplace.</p>
+					</div>
 					<div className="withdraw">
 						{isWalletInstalled ? (
 							<button onClick={connectWallet}>Connect Wallet</button>
@@ -105,54 +136,57 @@ function App() {
 							<p>Install Metamask wallet</p>
 						)}
 					</div>
-
-					<footer className="footer">
-						<p>Made by <a href="https://fabricegeib.com" target="_blank" rel="noreferrer">Fabrice Geib</a> with the course of <a href="https://metaschool.so" target="_blank" rel="noreferrer">Metaschool.so</a></p>
-					</footer>
 				</div>
+				<footer className="footer-alt">
+						<p>Made by <a href="https://fabricegeib.com" className="App-link" target="_blank" rel="noreferrer">Fabrice Geib</a> with the course of <a href="https://metaschool.so" className="App-link" target="_blank" rel="noreferrer">Metaschool.so</a></p>
+					</footer>
         	</div>
      	 );
     }
  
     return (
-    	<div className="App">
-			<div className="withdraw">
-				<button onClick={() => {withdrawMoney();}}>
-					Withdraw Money from Contract
-				</button>
-			</div>
-        	
+    	<div className="App">   	
 			<div className="container">
-		
-        	<h1>NFT Marketplace</h1>
+				
+				<div className="header">
+					<h1>NFT Marketplace</h1>
+					<p>Buy an NFT from our marketplace.</p>
+					<p className="etherscan-link">Find the contract on Etherscan : <a href="https://rinkeby.etherscan.io/address/0xee305cdde5b17b35eb8ebb664f79a020c3c857c1" className="App-link" target="_blank" rel="noreferrer">link</a></p>
+				</div>
 
-			Find the contract on Etherscan : <a href="https://rinkeby.etherscan.io/address/0xee305cdde5b17b35eb8ebb664f79a020c3c857c1">link</a>
-		
+				<div className="withdraw">
+					<button onClick={() => {withdrawMoney();}}>
+						Withdraw Money from Contract
+					</button>
+				</div>  
+			
 			<div className="nfts">
 				{data.map((item, index) => (
 				<div className="nft" key={index}>
-					<img
+					<img className="nft__img"
 						src={item.url}
 						key={index}
 						alt="images"
 						// width={250}
 						// height={250}
 					/>
-					<button isLoading={isMinting}
-						onClick={() => {
-							eval(item.param);
-						}}
-					>
-						Mint for 0.01 eth
-					</button>
+					<div className="nft__bottom">
+						<p className="nft__description">{item.description}</p>
+						<button className="nft__button" isLoading={isMinting}
+							onClick={() => {
+								eval(item.param);
+							}}
+						>
+							Mint for 0.01 eth
+						</button>
+					</div>
 				</div>
 				))}
 			</div>
-
-			<footer className="footer">
-				<p>Made by <a href="https://fabricegeib.com" target="_blank" rel="noreferrer">Fabrice Geib</a> with the course of <a href="https://metaschool.so" target="_blank" rel="noreferrer">Metaschool.so</a></p>
-			</footer>
         </div>
+		<footer className="footer">
+				<p>Made by <a href="https://fabricegeib.com" className="App-link" target="_blank" rel="noreferrer">Fabrice Geib</a> with the course of <a href="https://metaschool.so" className="App-link" target="_blank" rel="noreferrer">Metaschool.so</a></p>
+			</footer>
       </div>
     );
 }
