@@ -1,3 +1,7 @@
+body {
+  background-color: #333;
+}
+
 h1, h2, h3, p {
   margin: 0;
   padding: 0;
@@ -13,13 +17,24 @@ h1, h2, h3, p {
   justify-content: center;
   /* align-items: center; */
   position: relative;
-  padding: 2rem 0;
+  /* padding: 2rem 0; */
 }
 
-.App-logo {
+.container {
+  /* width: 60%; */
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-around; */
+  /* text-align: center; */
+  max-width: 1600px;
+  align-self: center;
+  padding: 0 2rem;
+}
+
+/* .App-logo {
   height: 40vmin;
   pointer-events: none;
-}
+} */
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -39,7 +54,7 @@ h1, h2, h3, p {
 }
 
 .App-link {
-  color: #61dafb;
+  color: #C5AE6A;
 }
 
 @keyframes App-logo-spin {
@@ -52,44 +67,34 @@ h1, h2, h3, p {
 }
 
 
-/* Metaschool */
-
-a {
-  color: #C5AE6A;
-}
+/* Metaschool 
+by Fabrice*/
 
 img {
   max-width: 100%;
   height: auto;
 }
 
-.container {
-  width: 60%;
-    /* display: flex; */
-    flex-direction: row;
-    justify-content: space-around;
-    text-align: center;
-    margin: 0 auto;
+.header {
+  margin-top: 2rem;
+}
+.etherscan-link {
+  margin-top: 1.25rem;
+}
+
+.main {
+
 }
 
 .withdraw {
   position: absolute;
-  right: 24px;
+  right: 2rem;
   top: 24px;
-}
-
-.imgDiv {
-  /* display: inline-grid; */
-  margin: 10px;
-}
-.imgDiv button {
-  margin: 10px auto 0px auto;
- 
 }
  
 .nfts {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   column-gap: 2rem;
   grid-template-rows: auto;
   row-gap: 2rem;
@@ -98,7 +103,28 @@ img {
 }
 
 .nft {
+  /* background-color: #282c34; */
+  /* align-self: center; */
+  background-color: #262626;
+  border-radius: 6px;
+  justify-content: center;
+}
 
+.nft__img {
+  border-radius: 6px 6px 0 0;
+}
+.nft__bottom {
+  min-height: 8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.nft__description {
+
+}
+.nft__button {
+  width: 80%;
 }
  
 button {
@@ -125,7 +151,7 @@ button:hover {
   /* width: 100%; */
 }
  
-.contentDiv {
+/* .contentDiv {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -133,20 +159,48 @@ button:hover {
   border: 2px solid #4CAF50;
   border-radius: 15px;
   padding: 20px;
+} */
+
+.footer-alt {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 24px 0;
+}
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  /* flex-direction: column; */
+  /* align-items: center; */
+  padding: 24px 0;
+  background-color: #262626;
 }
 
-.footer {
-  margin-top: 2rem;
-}
- 
-@media screen and (max-width: 1000px) {
-  .imgGrid {
+@media screen and (max-width: 1200px) {
+  .nfts {
     grid-template-columns: repeat(3, 1fr);
   }
 }
  
-@media screen and (max-width: 600px) {
-  .imgGrid {
+@media screen and (max-width: 1000px) {
+  .nfts {
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+ 
+@media screen and (max-width: 600px) {
+  /* .imgGrid {
+    grid-template-columns: repeat(2, 1fr);
+  } */
+  .withdraw {
+    position: relative;
+    right: 0;
+    top: 0;
+    margin-top: 2rem;
+    /* order: 1; */
+  }
+  .nfts {
+    grid-template-columns: repeat(1, 1fr);
   }
 }

@@ -1,6 +1,19 @@
 # NFT Marketplace
 
-https://metaschool.so/courses/launch-your-own-epic-nft-marketplace/lesson/7cc09613-0b05-4e3f-a747-be657a0b2aaf
+Made with `create-react-app`, CSS and Solidity
+by Fabrice Geib
+
+![Preview](https://github.com/fabricegeib/metaschool/tree/master/nft-marketplace/collections-react/nft-marketplace-preview-1.png)
+
+🔗 [Link of the website](https://metaschool.vercel.app/)
+
+🔗 [Link of the contract on rinkeby etherscan](https://rinkeby.etherscan.io/address/0xee305cddE5B17b35eb8EBB664F79A020c3C857C1)
+
+🔗 [Link of the collection on testnets opensea](https://testnets.opensea.io/collection/collection-zyhwkm0rpa)
+
+🔗 [Link of the courses on metaschool](https://metaschool.so/courses/launch-your-own-epic-nft-marketplace/lesson/7cc09613-0b05-4e3f-a747-be657a0b2aaf)
+
+### Resume
 
 - We will start of with setting up our development environment and downloading all the dependencies. The tech stack we will be using today is - Hardhat, Alchemy, Pinata, React and Ethers.js
 - We will then use the openzepellin library’s ERC721 smart contract, and inherit it to create our own NFT smart contract called Collection.sol
@@ -196,3 +209,12 @@ https://ipfs.io/ipfs/QmQNjFyowhQzxhiUYqZf5h2FpBuLXDbwKEDXDuvYdhmpxe/1.json
 ### Frontend et contractABI.json
 
 Dans le dossier `src` dans notre site `collections-react` créer un nouveau fichier `contractABI.json`
+
+### Preview connected
+
+![Preview](https://github.com/fabricegeib/metaschool/tree/master/nft-marketplace/collections-react/nft-marketplace-preview-2.png)
+
+# To fix
+⚠️ Executing JavaScript from a string is an enormous security risk. It is far too easy for a bad actor to run arbitrary code when you use eval(). See Never use eval()!, below.
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval
