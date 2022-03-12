@@ -212,7 +212,7 @@ Dans le dossier `src` dans notre site `collections-react` créer un nouveau fich
 
 ### Preview connected
 
-![Preview](https://github.com/fabricegeib/metaschool/raw/master/nft-marketplace/collections-react/nft-marketplace-preview-1.png)
+![Preview](https://github.com/fabricegeib/metaschool/raw/master/nft-marketplace/collections-react/nft-marketplace-preview-2.png)
 
 # To fix
 ⚠️ Executing JavaScript from a string is an enormous security risk. It is far too easy for a bad actor to run arbitrary code when you use eval(). See Never use eval()!, below.
