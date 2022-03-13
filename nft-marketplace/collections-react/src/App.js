@@ -68,32 +68,7 @@ function App() {
           url: "./assets/images/5.png",
 			description: "This is a fox NFT",
             param: "handleMint('https://ipfs.io/ipfs/QmQNjFyowhQzxhiUYqZf5h2FpBuLXDbwKEDXDuvYdhmpxe/5.json')",
-        },
-		{
-            url: "./assets/images/1.png",
-			description: "This is a dog NFT",
-            param: "handleMint('https://ipfs.io/ipfs/QmQNjFyowhQzxhiUYqZf5h2FpBuLXDbwKEDXDuvYdhmpxe/1.json')",
-        },
-        {
-          	url: "./assets/images/4.png",
-			description: "This is a cow NFT",
-            param: "handleMint('https://ipfs.io/ipfs/QmQNjFyowhQzxhiUYqZf5h2FpBuLXDbwKEDXDuvYdhmpxe/2.json')",
-        },
-        {
-          url: "./assets/images/3.png",
-			description: "This is a lion NFT",
-            param: "handleMint('https://ipfs.io/ipfs/QmQNjFyowhQzxhiUYqZf5h2FpBuLXDbwKEDXDuvYdhmpxe/3.json')",
-        },
-        {
-          url: "./assets/images/2.png",
-			description: "This is a fox NFT",
-            param: "handleMint('https://ipfs.io/ipfs/QmQNjFyowhQzxhiUYqZf5h2FpBuLXDbwKEDXDuvYdhmpxe/4.json')",
-        },
-        {
-          url: "./assets/images/5.png",
-			description: "This is a fox NFT",
-            param: "handleMint('https://ipfs.io/ipfs/QmQNjFyowhQzxhiUYqZf5h2FpBuLXDbwKEDXDuvYdhmpxe/5.json')",
-        },
+        }
     ];
  
     async function withdrawMoney(){
