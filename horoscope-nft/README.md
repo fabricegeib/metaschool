@@ -2,6 +2,8 @@
 
 A super project to take you from scratch and help you build your first ever minting application.
 
+https://metaschool.so/courses/create-a-horoscope-web3-nft-application
+
 - Horoscope Collection
 - Horoscope App
 
