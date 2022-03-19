@@ -98,25 +98,25 @@ function App() {
  
     if (account === null) {
     	return (
-        	<div className="App">
-				<div className="container">
-					<div className="header">
-						<h1>NFT Marketplace</h1>
-						<p>Buy an NFT from our marketplace.</p>
-					</div>
-					<div className="withdraw">
-						{isWalletInstalled ? (
-							<button onClick={connectWallet}>Connect Wallet</button>
-						) : (
-							<p>Install Metamask wallet</p>
-						)}
-					</div>
-				</div>
-				<footer className="footer-alt">
+        <div className="App">
+          <div className="container">
+            <div className="header">
+              <h1>NFT Marketplace</h1>
+              <p>Buy an NFT from our marketplace.</p>
+            </div>
+            <div className="withdraw">
+              {isWalletInstalled ? (
+                <button onClick={connectWallet}>Connect Wallet</button>
+              ) : (
+                <p>Install Metamask wallet</p>
+              )}
+            </div>
+          </div>
+          <footer className="footer-alt">
 						<p>Made by <a href="https://fabricegeib.com" className="App-link" target="_blank" rel="noreferrer">Fabrice Geib</a> with the course of <a href="https://metaschool.so" className="App-link" target="_blank" rel="noreferrer">Metaschool.so</a></p>
 					</footer>
-        	</div>
-     	 );
+        </div>
+     	);
     }
  
     return (
